@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Poppins:wght@300&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+     --primary-color: rgb(179, 179, 32);
+     --secondary-color:rgb(179, 179, 32);
+     ;
+
+}
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+     height 100vh;
+     width: 100%;
+     background-color: var(--secondary-color);
+     position: relative;
+}
+.header nav{
+    width: 98%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0 2rem;
+}
+
+.header .menu{
+    font-size: 25px;
+    display: none;
+
+}
+.header nav img{
+    width: 144px;
+    border-radius: 31px;
+    height: 90px;
+}
+
+.header nav ul{
+    display: flex;
+}
+
+.header nav li {
+    list-style: none; 
+    margin: 0 5px;
+}
+.header nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.2rem 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+.header nav li a::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.3s linear;
+}
+.header nav li a:hover:before{
+    width: 100%;
+}
+.header nav li a:hover{
+    color: white;
+}
+.header .main{
+    text-align: center;
+
+}
+.header .main h1{
+    font-size: 2.0rem;
+    font-family: 'Bodoni Moda', serif;
+    margin-bottom: 1.2rem;
+    padding-top: 100px;
+}
+.header .main a{
+    text-decoration: none;
+    width: 350px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    border: 2px solid black;
+    transition: 0.5s;
+}
+.header .main a:hover{
+    background: transparent;
+    color: black; 
+
+}
+
+path {
+    margin-top: 20px ;
+}
+.fa {
+
+    padding: 5px;
+    font-size: 21px;
+    width: 37px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    background-color: rgb(19, 2, 2);
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.service{
+    padding-top: 1rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.service h2{
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Boodni Moda', serif;
+
+}
+.servive p{
+    color: white;
+    font-size: 14px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+.service .service-col{
+    flex-basis: 30%;
+    border: 1px solid black;
+    color: black;
+    margin: 5%;
+    padding: 1rem 0.5rem;
+    position: relative;
+}
+.service .service-offer{
+    display: blok;
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    background-color: var(--primary-color);
+    /* border-radius: 50%; */
+    padding: 1px;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    transform: translateX(-50px);
+}
+.service .service-offer img{
+    width: 60px;
+}
+.service h4{
+    font-size: 1.3rem;
+    margin-top: 10%;
+
+}
+.service li{
+    text-align: left;
+    padding-left: 8px;
+    margin-left: 4px;
+
+}
+.footer{
+    /* margin-top: 10%; */
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+
+}
+.footer img{
+    padding: 1.3rem 0;
+    height: 140px;
+    border-radius: 32px;
+    width: 200px; 
+}
+.footer p{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.social-link{
+    width: 10%;
+    margin: auto;
+    padding: 1% 0 2%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+p.foot22{
+    background-color: gray;
+    margin-top: 91px;
+    color: black;
+}
+
+@media(max-width:800px){
+    .header nav{
+        padding: 5rem;
+    }
+    .row{
+        flex-direction: column;
+        
+    }
+    .header nav ul{
+        flex-direction: column;
+        width: 350px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 25%;
+        background: rgba(16, 24, 32, 1);
+        z-index: 1;
+        transition: 1s;
+    }
+    .header nav ul li a{
+        color: white;
+        font-size: 1.5rem;
+
+    }
+    .header nav ul li{
+        padding: 1.5rem;
+        margin-top: 10%;
+    }
+    .header .menu{
+        display: block;
+        font-size: 2rem;
+        /* color: white; */
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        z-index: 3;
+
+    }
+}
